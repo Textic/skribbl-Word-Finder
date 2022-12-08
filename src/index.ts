@@ -7,7 +7,6 @@ async function main() {
     var patternSplit: Array<string>;
     var dict: Array<string> = [];
     var tempDict: Array<string>;
-    var patternDict: any = {};
     var finalDict: any = {};
     var lastFinalDict = {};
     await fetch('https://textic.github.io/assets/dictionary.json').then(res => res.json()).then(data => {
@@ -27,7 +26,6 @@ async function main() {
         var hintsDiv: any = await page.$('.hints');
         var containerDiv: any = await hintsDiv.$('.container');
         var hints = await containerDiv.$$('.hint', (el: any) => el.innerText);
-        patternDict = {};
         pattern = '';
         patternSplit = [];
         for (var i = 0; i < hints.length; i++) {
