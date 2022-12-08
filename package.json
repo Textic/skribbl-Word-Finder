@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,5 +12,10 @@
   "license": "ISC",
   "dependencies": {
     "puppeteer": "^19.3.0"
+  },
+  "nodemonConfig": {
+    "execMap": {
+      "ts": "ts-node-esm"
+    }
   }
 }
